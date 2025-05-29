@@ -216,8 +216,8 @@ input:focus {
 }
 
 #chx label input[type="checkbox"]:checked ~ .checkmark {
-    background-color: #fff;
-    border: 1px solid #fff;
+    background-color: #44A08D 100%;
+    border: 1px solid #44A08D 100%;
 }
 
 #chx label .checkmark:after {
@@ -247,7 +247,7 @@ input:focus {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: -50px;
+    margin-top: -150px;
     padding: 0 20px;
     z-index: 10;
     position: relative;
