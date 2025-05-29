@@ -7,17 +7,12 @@
       <div class="heroimg">
         <table id="forms" cellpadding="1px">
           <tr>
-            <td colspan="4" style="height: 30px;"></td>
-            <td rowspan="4">
-              <img class="hero-image" src="/img/lizard.png">
-            </td>
-          </tr>
-          <tr>
             <td colspan="2">
               <input 
                 type="text" 
                 v-model="searchForm.symptome" 
                 placeholder="Услуга, врач, клиника, симптом"
+                id="symptome"
               >
             </td>
             <td colspan="2">
@@ -25,6 +20,7 @@
                 type="text" 
                 v-model="searchForm.district" 
                 placeholder="Метро, район, округ, город"
+                id="district"
               >
             </td>
           </tr>
@@ -34,6 +30,7 @@
                 type="text" 
                 v-model="searchForm.priceFrom" 
                 placeholder="Цена от, ₽"
+                id="pricefrom"
               >
             </td>
             <td>
@@ -41,6 +38,7 @@
                 type="text" 
                 v-model="searchForm.priceTo" 
                 placeholder="до"
+                id="priceto"
               >
             </td>
             <td>
@@ -48,21 +46,21 @@
                 type="date" 
                 v-model="searchForm.date" 
                 min="2025-06-01"
+                id="date"
               />
             </td>
             <td>
-              <button @click="search">Найти</button>
+              <button @click="search" id="find">Найти</button>
             </td>
           </tr>
           <tr>
-            <td colspan="2" id="chx">
+            <td colspan="4" id="chx">
               <label for="children">
                 <input 
                   type="checkbox" 
                   v-model="searchForm.children" 
                   id="children"
                 >
-                Детский врач
               </label>
               <label for="dms">
                 <input 
@@ -70,11 +68,11 @@
                   v-model="searchForm.dms" 
                   id="dms"
                 >
-                По полису ДМС
               </label>
             </td>
           </tr>
         </table>
+        <img class="hero-image" src="/img/lizard.png">
       </div>
     </div>
     
