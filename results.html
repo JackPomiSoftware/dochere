@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocHere - главная</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-links">
+            <img src="img/logo.png" alt="Ultimate Control" class="navimg">
+            <a href="#home">Анализы</a>
+            <a href="#features">Диагностика</a>
+            <a href="#donate">Новости</a>
+            <a href="https://jackpomisoftware.github.io/">Pro-подписка</a>
+            <a href="https://jackpomisoftware.github.io/">Режим доступности</a>
+            <div style="width: 100px;"></div>
+            <a href="https://jackpomisoftware.github.io/">Личный кабинет</a>
+            <link rel="stylesheet" href="style.css">
+        </div>
+    </div>
+    <div class="hero">
+        <div class="heroimg">
+            <table id="forms" cellpadding="1px">
+                <tr>
+                    <td colspan="4" style="height: 30px;"></td>
+                    <td rowspan="4">
+                        <img class="hero-image" src="img/lizard.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" id="symptome" name="symptome" placeholder="Услуга, врач, клиника, симптом">
+                    </td>
+                    <td colspan="2">
+                        <input type="text" id="district" name="district" placeholder="Метро, район, округ, город">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="pricefrom" name="pricefrom" placeholder="Цена от, ₽">
+                    </td>
+                    <td>
+                        <input type="text" id="priceto" name="priceto" placeholder="до">
+                    </td>
+                    <td>
+                        <input type="date" id="date" name="date" min="2025-06-01"/>
+                    </td>
+                    <td>
+                        <button id="find">Найти</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="chx">
+                        <label for="children"><input type="checkbox" id="children" name="children" value="Bike">Детский врач</label>
+                        <label for="dms"><input type="checkbox" id="dms" name="dms" value="Bike">По полису ДМС</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="res-container">
+        <div class="res">
+            <div class="res-panel-price">
+                <button class="res-price">1500₽</button>
+            </div>
+            <div class="res-title">
+                Зубенко Михаил Петрович
+            </div>
+            <div class="res-subtitle">
+                Невролог
+            </div>
+            <div class="res-text">
+                Клиника "Доброздрав" (ул. Люблинская, д. 153)
+            </div>
+            <div class="res-text">
+                Метро "Братиславская"
+            </div>
+            <div class="res-text">
+                +7 (499) 555-35-35
+            </div>
+            <div class="res-panel">
+                <button class="res-time">12:40</button>
+                <button class="res-time">13:12</button>
+                <button class="res-time">15:00</button>
+                <button class="res-time">16:24</button>
+                <button class="res-time">16:40</button>
+                <button class="res-click">Записаться</button>
+            </div>
+        </div>
+        <div class="res">
+            <div class="res-panel-price">
+                <button class="res-price">1300₽</button>
+            </div>
+            <div class="res-title">
+                Попов Алексей Иванович
+            </div>
+            <div class="res-subtitle">
+                Невролог
+            </div>
+            <div class="res-text">
+                Медицинский центр "Невроплюс" (ул. Маршала Баграмяна, д. 12)
+            </div>
+            <div class="res-text">
+                Метро "Братиславская"
+            </div>
+            <div class="res-text">
+                +7 (499) 777-77-78
+            </div>
+            <div class="res-panel">
+                <button class="res-time">10:24</button>
+                <button class="res-time">11:12</button>
+                <button class="res-time">15:40</button>
+                <button class="res-click">Записаться</button>
+            </div>
+        </div>
+        <div class="res">
+            <div class="res-panel-price">
+                <button class="res-price">1600₽</button>
+            </div>
+            <div class="res-title">
+                Куйбышев Виктор Сергеевич
+            </div>
+            <div class="res-subtitle">
+                Невролог
+            </div>
+            <div class="res-text">
+                Клиника "Фамильный Доктор" (ул. Белореченская, д. 77)
+            </div>
+            <div class="res-text">
+                Метро "Братиславская"
+            </div>
+            <div class="res-text">
+                +7 (499) 564-33-57
+            </div>
+            <div class="res-panel">
+                <button class="res-time">10:56</button>
+                <button class="res-time">12:12</button>
+                <button class="res-time">13:46</button>
+                <button class="res-time">14:02</button>
+                <button class="res-click">Записаться</button>
+            </div>
+        </div>
+        <div class="res">
+            <div class="res-panel-price">
+                <button class="res-price">900₽</button>
+            </div>
+            <div class="res-title">
+                Чкалов Леонид Андреевич
+            </div>
+            <div class="res-subtitle">
+                Невролог
+            </div>
+            <div class="res-text">
+                Клиника "ВрачНеГрач" (ул. Марьинский Парк, д. 24)
+            </div>
+            <div class="res-text">
+                Метро "Марьино"
+            </div>
+            <div class="res-text">
+                +7 (495) 353-21-63
+            </div>
+            <div class="res-panel">
+                <button class="res-time">9:10</button>
+                <button class="res-time">9:12</button>
+                <button class="res-time">9:40</button>
+                <button class="res-time">10:34</button>
+                <button class="res-time">11:04</button>
+                <button class="res-time">11:18</button>
+                <button class="res-time">11:36</button>
+                <button class="res-click">Записаться</button>
+            </div>
+        </div>
+        <div class="res">
+            <div class="res-panel-price">
+                <button class="res-price">1700₽</button>
+            </div>
+            <div class="res-title">
+                Устинов Виталий Борисович
+            </div>
+            <div class="res-subtitle">
+                Невролог
+            </div>
+            <div class="res-text">
+                Клиника "WinClinic" (ул. Донецкая, д. 2)
+            </div>
+            <div class="res-text">
+                Метро "Марьино"
+            </div>
+            <div class="res-text">
+                +7 (495) 224-22-27
+            </div>
+            <div class="res-panel">
+                <button class="res-time">9:00</button>
+                <button class="res-time">9:16</button>
+                <button class="res-time">9:32</button>
+                <button class="res-time">9:48</button>
+                <button class="res-time">10:00</button>
+                <button class="res-time">10:16</button>
+                <button class="res-time">10:32</button>
+                <button class="res-time">10:48</button>
+                <button class="res-time" id="other-time">...</button>
+                <button class="res-click">Записаться</button>
+            </div>
+        </div>
+    </div>
+    <div class="endbar">
+        <div class="end-links">
+            <a href="https://jackpomisoftware.github.io/">© 2025 DocHere</a>
+            <div style="width: 100px;"></div>
+            <a href="https://jackpomisoftware.github.io/">О компании</a>
+            <a href="https://jackpomisoftware.github.io/">Помощь</a>
+            <a href="https://jackpomisoftware.github.io/">Новости</a>
+            <a href="https://jackpomisoftware.github.io/">Условия использования</a>
+            <a href="https://jackpomisoftware.github.io/">Политика конфиденциальности</a>
+        </div>
+    </div>
+</body>
+</html>
