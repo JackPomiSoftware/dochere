@@ -1,0 +1,518 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Навигация */
+.navbar {
+    background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.navimg {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex: 1;
+    justify-content: center;
+    margin-left: -200px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+/* Главная секция */
+.hero {
+    background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 80px;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 60px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.heroimg {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.hero-image {
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+}
+
+/* Форма поиска */
+#forms {
+    background: transparent;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    border-spacing: 0;
+}
+
+.search-inputs-background {
+    background-color: #44A08D 100%;
+    border-radius: 15px 15px 0 0;
+    padding: 20px;
+}
+
+#forms td {
+    padding: 0;
+}
+
+input {
+    height: 60px;
+    font-size: 16px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    padding: 0 20px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4ECDC4;
+    box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.1);
+}
+
+#symptome {
+    border-radius: 15px 0 0 0;
+    width: 300px;
+}
+
+#district {
+    border-radius: 0 15px 0 0;
+    width: 300px;
+    border-left: 2px solid #e0e0e0;
+}
+
+#pricefrom {
+    border-radius: 0 0 0 0;
+    width: 150px;
+    border-top: 2px solid #e0e0e0;
+}
+
+#priceto {
+    border-radius: 0 0 0 0;
+    width: 150px;
+    border-top: 2px solid #e0e0e0;
+    border-left: 2px solid #e0e0e0;
+}
+
+#date {
+    border-radius: 0 0 0 0;
+    width: 200px;
+    border-top: 2px solid #e0e0e0;
+    border-left: 2px solid #e0e0e0;
+}
+
+#find {
+    background: linear-gradient(135deg, #FF6B6B 0%, #E55E40 100%);
+    border: none;
+    border-left: 2px solid #e0e0e0;
+    border-top: 2px solid #e0e0e0;
+    border-radius: 0 0 15px 0;
+    width: 100px;
+    height: 62px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#find:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(229, 94, 64, 0.4);
+}
+
+#chx {
+    text-align: left;
+    color: white;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding-top: 10px;
+    background-color: transparent;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+
+#chx label {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    line-height: 18px;
+}
+
+#chx label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+#chx label .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#chx label input[type="checkbox"]:checked ~ .checkmark {
+    background-color: #44A08D 100%;
+    border: 1px solid #44A08D 100%;
+}
+
+#chx label .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+#chx label input[type="checkbox"]:checked ~ .checkmark:after {
+    display: block;
+}
+
+#chx label .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Блоки преимуществ */
+.adv-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: -150px;
+    padding: 0 20px;
+    z-index: 10;
+    position: relative;
+}
+
+.adv1 {
+    width: 323px;
+    height: 276px;
+    border-radius: 30px;
+    background-image: url("/img/bg1.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.adv1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.adv2 {
+    width: 323px;
+    height: 276px;
+    border-radius: 30px;
+    background-image: url("/img/bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.adv2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.adv1::before,
+.adv2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
+    z-index: 1;
+}
+
+.adv-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    z-index: 2;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.adv-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+    z-index: 2;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.adv-click {
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 15px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+    position: relative;
+    backdrop-filter: blur(10px);
+    align-self: flex-start;
+}
+
+.adv-click:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Результаты поиска */
+.res-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.res {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.res:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.res-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.res-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4ECDC4;
+    margin-bottom: 15px;
+}
+
+.res-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.res-panel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.res-panel-price {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.res-price {
+    background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.res-time {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.res-time:hover {
+    background: #4ECDC4;
+    color: white;
+    border-color: #4ECDC4;
+}
+
+.res-click {
+    background: linear-gradient(135deg, #FF6B6B 0%, #E55E40 100%);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: auto;
+}
+
+.res-click:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(229, 94, 64, 0.4);
+}
+
+/* Подвал */
+.endbar {
+    background: #2c3e50;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.end-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.end-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.end-links a:hover {
+    color: #4ECDC4;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .heroimg {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .adv-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-links {
+        gap: 20px;
+        font-size: 14px;
+    }
+    
+    #forms {
+        padding: 15px;
+    }
+    
+    input {
+        width: 100% !important;
+    }
+    
+    #forms td {
+        display: block;
+        width: 100%;
+    }
+    
+    #symptome, #district, #pricefrom, #priceto, #date, #find {
+        border-radius: 10px !important;
+        margin-bottom: 10px;
+        border: 2px solid #e0e0e0 !important;
+    }
+}

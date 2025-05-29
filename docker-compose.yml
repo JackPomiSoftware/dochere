@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  dochere-app:
+    build: .
+    container_name: dochere-vue-app
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - dochere-network
+
+networks:
+  dochere-network:
+    driver: bridge 
